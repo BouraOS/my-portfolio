@@ -1,6 +1,13 @@
-import { Download, Phone, Mail, Globe } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { Download, Phone, Mail, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { i18n, t } = useTranslation();
+  const isEnglish = i18n.language === "en";
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
   return (
     <section id="home" className="min-h-screen flex items-center px-8 lg:px-16">
       <div className="max-w-7xl mx-auto w-full">
@@ -16,12 +23,28 @@ const HeroSection = () => {
               <span>osamaboura@gmail.com</span>
             </div>
           </div>
-          
+
           <div className="flex space-x-2">
-            <button className="px-3 py-1 text-sm border border-[hsl(var(--portfolio-orange))] text-[hsl(var(--portfolio-orange))] rounded hover:portfolio-orange portfolio-orange-hover transition-colors duration-200">
+            <button
+              onClick={() => changeLanguage("en")}
+              className={cn(
+                "px-3 py-1 text-sm transition-colors duration-200",
+                isEnglish
+                  ? "portfolio-orange portfolio-orange-hover rounded"
+                  : "border border-[hsl(var(--portfolio-border))] portfolio-text rounded hover:border-[hsl(var(--portfolio-orange))] hover:text-[hsl(var(--portfolio-orange))]"
+              )}
+            >
               EN
             </button>
-            <button className="px-3 py-1 text-sm portfolio-text-muted hover:portfolio-text transition-colors duration-200">
+            <button
+              onClick={() => changeLanguage("fr")}
+              className={cn(
+                "px-3 py-1 text-sm transition-colors duration-200",
+                !isEnglish
+                  ? "portfolio-orange portfolio-orange-hover rounded"
+                  : "border border-[hsl(var(--portfolio-border))] portfolio-text rounded hover:border-[hsl(var(--portfolio-orange))] hover:text-[hsl(var(--portfolio-orange))]"
+              )}
+            >
               FR
             </button>
           </div>
@@ -36,39 +59,49 @@ const HeroSection = () => {
                 Bouramada Oussama
               </h1>
               <h2 className="text-2xl lg:text-3xl font-light text-[hsl(var(--portfolio-orange))] mb-6">
-                Full-Stack Developer
+                {t("hero.title")}
               </h2>
               <p className="text-lg portfolio-text-muted leading-relaxed max-w-lg">
-                Développeur Full Stack passionné, j’interviens sur des projets web et mobiles 
-                en alliant une forte expertise frontend (Angular, React, React Native)
-                à une maîtrise du backend Java avec Spring Boot. 
+                {t("hero.description")}
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4">
               <button className="portfolio-orange portfolio-orange-hover px-8 py-3 rounded-lg font-medium flex items-center space-x-2 transition-all duration-200 hover:scale-105">
                 <Download size={18} />
-                <span>Download CV</span>
+                <span>{t("hero.downloadCv")}</span>
               </button>
-              
-              <button className="border border-[hsl(var(--portfolio-border))] portfolio-text px-8 py-3 rounded-lg font-medium hover:border-[hsl(var(--portfolio-orange))] hover:text-[hsl(var(--portfolio-orange))] transition-all duration-200">
+
+              {/* <button className="border border-[hsl(var(--portfolio-border))] portfolio-text px-8 py-3 rounded-lg font-medium hover:border-[hsl(var(--portfolio-orange))] hover:text-[hsl(var(--portfolio-orange))] transition-all duration-200">
                 View Portfolio
-              </button>
+              </button> */}
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-[hsl(var(--portfolio-border))]">
               <div>
-                <div className="text-3xl font-bold text-[hsl(var(--portfolio-orange))]">2+</div>
-                <div className="text-sm portfolio-text-muted">Years Experience</div>
+                <div className="text-3xl font-bold text-[hsl(var(--portfolio-orange))]">
+                  2+
+                </div>
+                <div className="text-sm portfolio-text-muted">
+                  {t("hero.experience")}
+                </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-[hsl(var(--portfolio-orange))]">30+</div>
-                <div className="text-sm portfolio-text-muted">Projects Completed</div>
+                <div className="text-3xl font-bold text-[hsl(var(--portfolio-orange))]">
+                  30+
+                </div>
+                <div className="text-sm portfolio-text-muted">
+                  {t("hero.projects")}
+                </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-[hsl(var(--portfolio-orange))]">10+</div>
-                <div className="text-sm portfolio-text-muted">Happy Clients</div>
+                <div className="text-3xl font-bold text-[hsl(var(--portfolio-orange))]">
+                  10+
+                </div>
+                <div className="text-sm portfolio-text-muted">
+                  {t("hero.clients")}
+                </div>
               </div>
             </div>
           </div>
@@ -79,14 +112,20 @@ const HeroSection = () => {
               <div className="w-80 h-96 lg:w-96 lg:h-[28rem] portfolio-card rounded-2xl overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--portfolio-orange))] to-[hsl(var(--portfolio-orange-hover))] opacity-20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src="/images/photo-profile.jpeg" alt="Profile" width={128} height={128} className="object-cover w-full h-full" />
+                  <img
+                    src="/images/photo-profile.jpeg"
+                    alt="Profile"
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               </div>
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 portfolio-orange rounded-full flex items-center justify-center">
                 <Globe size={24} />
               </div>
-              
+
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-full flex items-center justify-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
               </div>
