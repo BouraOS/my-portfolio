@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "greeting": "Salut, je suis",
+    "title": "Développeur Full Stack",
+    "description": "Développeur Full Stack passionné, j’interviens sur des projets web et mobiles en alliant une forte expertise frontend (Angular, React, React Native) à une maîtrise du backend Java avec Spring Boot.",
+    "downloadCv": "Télécharger le CV",
+    "experience": "Années d'expérience",
+    "projects": "Projets réalisés",
+    "clients": "Clients satisfaits"
+  },
+  "biography": {
+    "title": "Biographie",
+    "description": {
+      "first": "Développeur Full Stack passionné, j’interviens sur des projets web et mobiles en alliant une forte expertise frontend (Angular, React, React Native) à une maîtrise du backend Java avec Spring Boot.",
+      "second": "Je conçois des architectures robustes, maintenables et sécurisées, tout en assurant une expérience utilisateur fluide et intuitive.",
+      "third": "J’ai travaillé sur des projets complexes intégrant des systèmes d’authentification avancés (Keycloak, JWT), des API REST sécurisées, des formulaires dynamiques, et une logique métier solide côté backend."
+    },
+    "info": {
+      "name": "Nom",
+      "birthDate": { "label": "Date de naissance", "value": "19 février 1997" },
+      "age": { "label": "Âge", "value": "28 ans" },
+      "address": { "label": "Adresse", "value": "Casablanca, Maroc" },
+      "email": "Email",
+      "phone": "Téléphone"
+    }
+  }
+}

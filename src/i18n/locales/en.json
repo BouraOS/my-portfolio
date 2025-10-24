@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Full Stack Developer",
+    "description": "Passionate Full Stack Developer, I work on web and mobile projects by combining strong frontend expertise (Angular, React, React Native) with proficiency in Java backend using Spring Boot.",
+    "downloadCv": "Download CV",
+    "experience": "Years Experience",
+    "projects": "Completed Projects",
+    "clients": "Happy Clients"
+  },
+  "biography": {
+    "title": "Biography",
+    "description": {
+      "first": "Passionate Full Stack Developer, I work on web and mobile projects by combining strong frontend expertise (Angular, React, React Native) with proficiency in Java backend using Spring Boot.",
+      "second": "I design robust, maintainable, and secure architectures, while ensuring a smooth and intuitive user experience.",
+      "third": "I have worked on complex projects integrating advanced authentication systems (Keycloak, JWT), secure REST APIs, dynamic forms, and solid backend business logic."
+    },
+    "info": {
+      "name": "Name",
+      "birthDate": { "label": "Birth Date", "value": "February 19, 1997" },
+      "age": { "label": "Age", "value": "28 Years" },
+      "address": { "label": "Address", "value": "Casablanca, Morocco" },
+      "email": "Email",
+      "phone": "Phone"
+    }
+  }
+}
