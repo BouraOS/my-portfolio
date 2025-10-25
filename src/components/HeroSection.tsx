@@ -113,7 +113,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--portfolio-orange))] to-[hsl(var(--portfolio-orange-hover))] opacity-20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img
-                    src="/images/photo-profile.jpeg"
+                    src="/images/photo-profile.webp"
                     alt="Profile"
                     width={128}
                     height={128}
