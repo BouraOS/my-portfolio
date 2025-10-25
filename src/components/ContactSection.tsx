@@ -1,7 +1,10 @@
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,27 +15,26 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: t("contact.email.title"),
       value: "osamaboura@gmail.com",
-      subtitle: "Send me an email anytime!",
+      subtitle: t("contact.email.subtitle"),
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: t("contact.phone.title"),
       value: "+212 691-288849",
-      subtitle: "Available for work in Morocco",
+      subtitle: t("contact.phone.subtitle"),
     },
     {
       icon: MapPin,
-      title: "Location",
+      title: t("contact.location.title"),
       value: "Casablanca, Morocco",
-      subtitle: "Available for work in Morocco",
+      subtitle: t("contact.location.subtitle"),
     },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Form submitted:", formData);
   };
 
@@ -49,10 +51,9 @@ const ContactSection = () => {
     <section id="contact" className="min-h-screen py-20 px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="section-header">Get In Touch</h2>
+          <h2 className="section-header">{t("contact.title")}</h2>
           <p className="text-lg portfolio-text-muted max-w-2xl">
-            Have a project in mind or want to collaborate? I'd love to hear from
-            you. Let's create something amazing together!
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -61,7 +62,7 @@ const ContactSection = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold portfolio-text mb-6">
-                Contact Information
+                {t("contact.infoTitle")}
               </h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => {
@@ -98,21 +99,33 @@ const ContactSection = () => {
                   size={20}
                   className="text-[hsl(var(--portfolio-orange))]"
                 />
-                <h4 className="font-medium portfolio-text">Availability</h4>
+                <h4 className="font-medium portfolio-text">
+                  {t("contact.availability.title")}
+                </h4>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="portfolio-text-muted">Monday - Friday</span>
-                  <span className="portfolio-text">9:00 AM - 6:00 PM</span>
+                  <span className="portfolio-text-muted">
+                    {t("contact.availability.weekdays")}
+                  </span>
+                  <span className="portfolio-text">
+                    {t("contact.availability.weekdaysHours")}
+                  </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="portfolio-text-muted">Weekend</span>
-                  <span className="portfolio-text">By appointment</span>
+                  <span className="portfolio-text-muted">
+                    {t("contact.availability.weekend")}
+                  </span>
+                  <span className="portfolio-text">
+                    {t("contact.availability.weekendHours")}
+                  </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="portfolio-text-muted">Response time</span>
+                  <span className="portfolio-text-muted">
+                    {t("contact.availability.response")}
+                  </span>
                   <span className="text-[hsl(var(--portfolio-orange))]">
-                    Within 24 hours
+                    {t("contact.availability.responseTime")}
                   </span>
                 </div>
               </div>
@@ -125,7 +138,9 @@ const ContactSection = () => {
                   size={20}
                   className="text-[hsl(var(--portfolio-orange))]"
                 />
-                <h4 className="font-medium portfolio-text">Let's Connect</h4>
+                <h4 className="font-medium portfolio-text">
+                  {t("contact.connectTitle")}
+                </h4>
               </div>
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
@@ -133,7 +148,7 @@ const ContactSection = () => {
                     24h
                   </div>
                   <div className="text-xs portfolio-text-muted">
-                    Response Time
+                    {t("contact.stats.responseTime")}
                   </div>
                 </div>
                 <div>
@@ -141,7 +156,7 @@ const ContactSection = () => {
                     100%
                   </div>
                   <div className="text-xs portfolio-text-muted">
-                    Project Success
+                    {t("contact.stats.projectSuccess")}
                   </div>
                 </div>
               </div>
@@ -152,7 +167,7 @@ const ContactSection = () => {
           <div className="lg:col-span-2">
             <div className="portfolio-card p-8">
               <h3 className="text-xl font-semibold portfolio-text mb-6">
-                Send Message
+                {t("contact.form.title")}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -162,7 +177,7 @@ const ContactSection = () => {
                       htmlFor="name"
                       className="block text-sm font-medium portfolio-text mb-2"
                     >
-                      Full Name *
+                      {t("contact.form.name")}
                     </label>
                     <input
                       type="text"
@@ -172,7 +187,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-[hsl(var(--portfolio-bg))] border border-[hsl(var(--portfolio-border))] rounded-lg portfolio-text focus:outline-none focus:border-[hsl(var(--portfolio-orange))] transition-colors duration-200"
-                      placeholder="Enter your full name"
+                      placeholder={t("contact.form.namePlaceholder")}
                     />
                   </div>
 
@@ -181,7 +196,7 @@ const ContactSection = () => {
                       htmlFor="email"
                       className="block text-sm font-medium portfolio-text mb-2"
                     >
-                      Email Address *
+                      {t("contact.form.email")}
                     </label>
                     <input
                       type="email"
@@ -191,7 +206,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-[hsl(var(--portfolio-bg))] border border-[hsl(var(--portfolio-border))] rounded-lg portfolio-text focus:outline-none focus:border-[hsl(var(--portfolio-orange))] transition-colors duration-200"
-                      placeholder="Enter your email"
+                      placeholder={t("contact.form.emailPlaceholder")}
                     />
                   </div>
                 </div>
@@ -201,7 +216,7 @@ const ContactSection = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium portfolio-text mb-2"
                   >
-                    Subject *
+                    {t("contact.form.subject")}
                   </label>
                   <input
                     type="text"
@@ -211,7 +226,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-[hsl(var(--portfolio-bg))] border border-[hsl(var(--portfolio-border))] rounded-lg portfolio-text focus:outline-none focus:border-[hsl(var(--portfolio-orange))] transition-colors duration-200"
-                    placeholder="What is this about?"
+                    placeholder={t("contact.form.subjectPlaceholder")}
                   />
                 </div>
 
@@ -220,7 +235,7 @@ const ContactSection = () => {
                     htmlFor="message"
                     className="block text-sm font-medium portfolio-text mb-2"
                   >
-                    Message *
+                    {t("contact.form.message")}
                   </label>
                   <textarea
                     id="message"
@@ -230,7 +245,7 @@ const ContactSection = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-[hsl(var(--portfolio-bg))] border border-[hsl(var(--portfolio-border))] rounded-lg portfolio-text focus:outline-none focus:border-[hsl(var(--portfolio-orange))] transition-colors duration-200 resize-vertical"
-                    placeholder="Tell me about your project..."
+                    placeholder={t("contact.form.messagePlaceholder")}
                   />
                 </div>
 
@@ -239,7 +254,7 @@ const ContactSection = () => {
                   className="portfolio-orange portfolio-orange-hover px-8 py-3 rounded-lg font-medium flex items-center space-x-2 transition-all duration-200 hover:scale-105"
                 >
                   <Send size={18} />
-                  <span>Send Message</span>
+                  <span>{t("contact.form.send")}</span>
                 </button>
               </form>
             </div>
@@ -249,8 +264,8 @@ const ContactSection = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-[hsl(var(--portfolio-border))] text-center">
           <p className="portfolio-text-muted">
-            © {new Date().getFullYear()} Bouramada Oussama. All rights reserved.
-            Built with React & Tailwind CSS.
+            © {new Date().getFullYear()} Bouramada Oussama.{" "}
+            {t("contact.footer")}
           </p>
         </div>
       </div>

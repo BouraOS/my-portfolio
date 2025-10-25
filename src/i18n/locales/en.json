@@ -84,5 +84,69 @@
   },
   "technicalSkills": {
     "title": "Technical Skills"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind or want to collaborate? I'd love to hear from you.",
+    "infoTitle": "Contact Information",
+    "email": {
+      "title": "Email",
+      "subtitle": "Send me an email anytime!"
+    },
+    "phone": {
+      "title": "Phone",
+      "subtitle": "Available for work in Morocco"
+    },
+    "location": {
+      "title": "Location",
+      "subtitle": "Based in Casablanca, Morocco"
+    },
+    "availability": {
+      "title": "Availability",
+      "weekdays": "Monday - Friday",
+      "weekdaysHours": "9:00 AM - 6:00 PM",
+      "weekend": "Weekend",
+      "weekendHours": "By appointment",
+      "response": "Response time",
+      "responseTime": "Within 24 hours"
+    },
+    "connectTitle": "Let's Connect",
+    "stats": {
+      "responseTime": "Response Time",
+      "projectSuccess": "Project Success"
+    },
+    "form": {
+      "title": "Send Message",
+      "name": "Full Name *",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address *",
+      "emailPlaceholder": "Enter your email",
+      "subject": "Subject *",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message *",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message"
+    },
+    "footer": "All rights reserved. Built with React & Tailwind CSS."
+  },
+  "education": {
+    "title": "Education",
+    "list": {
+      "edu1": {
+        "degree": "Baccalaureate in Physical Sciences",
+        "school": "LYCÉE ABDALLAH CHEFCHAOINI",
+        "period": "2014 - 2015"
+      },
+      "edu2": {
+        "degree": "Bachelor’s Degree (Bac +3) in Physical Sciences",
+        "school": "Faculty of Sciences Ibn Zohr Agadir",
+        "period": "2016 - 2019"
+      },
+      "edu3": {
+        "degree": "Diploma (Bac +2) Specialized Technician in Software Development",
+        "school": "(ISTA) Agadir",
+        "period": "2021"
+      }
+    }
   }
 }

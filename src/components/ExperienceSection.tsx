@@ -5,7 +5,13 @@ const ExperienceSection = () => {
   const { t } = useTranslation();
 
   const experiences = t("experience.experienceList", { returnObjects: true });
-
+  const educationList = t("education.list", { returnObjects: true }) as {
+    [key: string]: {
+      degree: string;
+      school: string;
+      period: string;
+    };
+  };
   const skills = [
     { name: "Angular", percentage: 95 },
     { name: "Reactjs", percentage: 90 },
@@ -133,39 +139,21 @@ const ExperienceSection = () => {
             {/* Education */}
             <div>
               <h3 className="text-xl font-semibold portfolio-text mb-6">
-                Education
+                {t("education.title")}
               </h3>
+
               <div className="space-y-6">
-                <div className="portfolio-card p-4">
-                  <h4 className="font-semibold portfolio-text">
-                    Baccalauréat Sciences Physiques
-                  </h4>
-                  <p className="text-[hsl(var(--portfolio-orange))] mb-1">
-                    LYCÉE ABDALLAH CHEFCHAOINI
-                  </p>
-                  <p className="text-sm portfolio-text-muted">2014 - 2015</p>
-                </div>
-
-                <div className="portfolio-card p-4">
-                  <h4 className="font-semibold portfolio-text">
-                    Licence (Bac + 3) Sciences Physique.
-                  </h4>
-                  <p className="text-[hsl(var(--portfolio-orange))] mb-1">
-                    Faculté des Sciences de Ibn Zohr Agadir.
-                  </p>
-                  <p className="text-sm portfolio-text-muted">2016 - 2019</p>
-                </div>
-
-                <div className="portfolio-card p-4">
-                  <h4 className="font-semibold portfolio-text">
-                    Diplôme (Bac + 2) Technicien spécialisé en développement
-                    informatique
-                  </h4>
-                  <p className="text-[hsl(var(--portfolio-orange))] mb-1">
-                    (ISTA) Agadir
-                  </p>
-                  <p className="text-sm portfolio-text-muted">2021</p>
-                </div>
+                {Object.values(educationList).map((edu, index) => (
+                  <div key={index} className="portfolio-card p-4">
+                    <h4 className="font-semibold portfolio-text">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-[hsl(var(--portfolio-orange))] mb-1">
+                      {edu.school}
+                    </p>
+                    <p className="text-sm portfolio-text-muted">{edu.period}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

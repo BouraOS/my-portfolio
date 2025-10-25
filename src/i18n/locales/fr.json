@@ -84,5 +84,69 @@
   },
   "technicalSkills": {
     "title": "Compétences Techniques"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Vous avez un projet ou souhaitez collaborer ? Parlons-en !",
+    "infoTitle": "Informations de contact",
+    "email": {
+      "title": "E-mail",
+      "subtitle": "Envoyez-moi un e-mail à tout moment !"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "subtitle": "Disponible pour travail au Maroc"
+    },
+    "location": {
+      "title": "Localisation",
+      "subtitle": "Basé à Casablanca, Maroc"
+    },
+    "availability": {
+      "title": "Disponibilité",
+      "weekdays": "Lundi - Vendredi",
+      "weekdaysHours": "09:00 - 18:00",
+      "weekend": "Week-end",
+      "weekendHours": "Sur rendez-vous",
+      "response": "Délai de réponse",
+      "responseTime": "Sous 24 heures"
+    },
+    "connectTitle": "Restons en contact",
+    "stats": {
+      "responseTime": "Délai de réponse",
+      "projectSuccess": "Taux de réussite"
+    },
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Nom complet *",
+      "namePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse e-mail *",
+      "emailPlaceholder": "Entrez votre adresse e-mail",
+      "subject": "Sujet *",
+      "subjectPlaceholder": "Quel est le sujet ?",
+      "message": "Message *",
+      "messagePlaceholder": "Parlez-moi de votre projet...",
+      "send": "Envoyer le message"
+    },
+    "footer": "Tous droits réservés. Créé avec React et Tailwind CSS."
+  },
+  "education": {
+    "title": "Éducation",
+    "list": {
+      "edu1": {
+        "degree": "Baccalauréat Sciences Physiques",
+        "school": "LYCÉE ABDALLAH CHEFCHAOINI",
+        "period": "2014 - 2015"
+      },
+      "edu2": {
+        "degree": "Licence (Bac +3) Sciences Physiques",
+        "school": "Faculté des Sciences Ibn Zohr Agadir",
+        "period": "2016 - 2019"
+      },
+      "edu3": {
+        "degree": "Diplôme (Bac +2) Technicien spécialisé en développement informatique",
+        "school": "(ISTA) Agadir",
+        "period": "2021"
+      }
+    }
   }
 }
