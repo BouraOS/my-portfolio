@@ -1,19 +1,18 @@
 {
   "hero": {
-    "greeting": "Salut, je suis",
     "title": "Développeur Full Stack",
-    "description": "Développeur Full Stack passionné, j’interviens sur des projets web et mobiles en alliant une forte expertise frontend (Angular, React, React Native) à une maîtrise du backend Java avec Spring Boot.",
+    "description": "Développeur Full Stack passionné, spécialisé dans la création d’applications web et mobiles modernes. Je combine une solide expertise frontend (Angular, React, React Native) avec une maîtrise du backend Java via Spring Boot.",
     "downloadCv": "Télécharger le CV",
-    "experience": "Années d'expérience",
+    "experience": "Années d’expérience",
     "projects": "Projets réalisés",
     "clients": "Clients satisfaits"
   },
   "biography": {
     "title": "Biographie",
     "description": {
-      "first": "Développeur Full Stack passionné, j’interviens sur des projets web et mobiles en alliant une forte expertise frontend (Angular, React, React Native) à une maîtrise du backend Java avec Spring Boot.",
-      "second": "Je conçois des architectures robustes, maintenables et sécurisées, tout en assurant une expérience utilisateur fluide et intuitive.",
-      "third": "J’ai travaillé sur des projets complexes intégrant des systèmes d’authentification avancés (Keycloak, JWT), des API REST sécurisées, des formulaires dynamiques, et une logique métier solide côté backend."
+      "first": "Développeur Full Stack passionné, je conçois et développe des applications web et mobiles en alliant une forte expertise frontend (Angular, React, React Native) à des compétences backend solides en Java et Spring Boot.",
+      "second": "Je m’attache à créer des architectures robustes, maintenables et sécurisées, tout en garantissant une expérience utilisateur fluide et intuitive.",
+      "third": "Au fil de mon parcours, j’ai travaillé sur des projets complexes intégrant des systèmes d’authentification avancés (Keycloak, JWT), des API REST sécurisées, des formulaires dynamiques et une logique métier backend performante."
     },
     "info": {
       "name": "Nom",
@@ -23,5 +22,67 @@
       "email": "Email",
       "phone": "Téléphone"
     }
+  },
+  "services": {
+    "title": "Ce que je fais ?",
+    "description": "Je propose des solutions complètes pour concevoir, développer et optimiser vos produits digitaux, aussi bien sur le web que sur mobile.",
+    "serviceList": {
+      "webDevelopment": {
+        "title": "Développement Web",
+        "description": "Création d’applications web dynamiques, évolutives et responsives à l’aide de frameworks modernes comme Angular et React."
+      },
+      "mobileDevelopment": {
+        "title": "Développement Mobile",
+        "description": "Conception d’applications mobiles multiplateformes performantes avec React Native pour une expérience utilisateur fluide."
+      },
+      "backendDevelopment": {
+        "title": "Développement Backend",
+        "description": "Mise en place de systèmes backend fiables avec Java et Spring Boot, garantissant des API sécurisées et performantes."
+      },
+      "uiuxDesign": {
+        "title": "Conception UI/UX",
+        "description": "Création d’interfaces attrayantes, intuitives et centrées sur l’utilisateur pour favoriser l’engagement et la satisfaction."
+      },
+      "seoOptimization": {
+        "title": "Optimisation SEO",
+        "description": "Amélioration de la visibilité de votre site web grâce à une optimisation technique et de contenu favorisant le trafic organique."
+      }
+    },
+    "contact": "Prêt à lancer votre prochain projet ? Réalisons-le ensemble !",
+    "getInTouch": "Me Contacter"
+  },
+  "experience": {
+    "title": "Expérience",
+    "description": "Je possède une solide expérience en développement full stack, avec une expertise approfondie en Angular, React, React Native et Spring Boot.",
+    "keyAchievements": "Réalisations clés :",
+    "experienceList": {
+      "job1": {
+        "role": "Développeur Frontend",
+        "company": "Royal Air Maroc",
+        "location": "Casablanca, Maroc",
+        "period": "2024 - Présent",
+        "description": "En tant que Développeur Frontend chez Royal Air Maroc, je contribue à la conception, au développement et à l’optimisation d’applications web et mobiles visant à améliorer l’expérience client et l’efficacité opérationnelle.",
+        "achievements": [
+          "Développement de la version 2 de l’application mobile RAM Assistant.",
+          "Conception et maintenance du chatbot ATLAS pour fournir des informations en temps réel sur les vols et une assistance aux clients.",
+          "Création de Flight Watch — un tableau de bord en temps réel pour le suivi des opérations aériennes et des statuts de vol."
+        ]
+      },
+      "job2": {
+        "role": "Développeur Full Stack",
+        "company": "IT Road Consulting",
+        "location": "Agadir, Maroc",
+        "period": "2023 - 2024",
+        "description": "J’ai débuté ma carrière professionnelle en développant des sites web pour divers clients tout en apprenant les bonnes pratiques du développement moderne. J’ai acquis de l’expérience à la fois en frontend et en backend.",
+        "achievements": [
+          "Participation à la conception et au développement du site web de la Fondation Mohammed VI (FM6).",
+          "Participation à la conception et au développement du site web de l’Agence pour le Développement Agricole (ADA).",
+          "Collaboration étroite avec des équipes pluridisciplinaires pour définir les besoins et livrer des solutions numériques sur mesure."
+        ]
+      }
+    }
+  },
+  "technicalSkills": {
+    "title": "Compétences Techniques"
   }
 }

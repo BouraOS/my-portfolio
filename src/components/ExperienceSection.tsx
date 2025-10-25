@@ -1,36 +1,11 @@
 import { BriefcaseBusiness, Calendar, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ExperienceSection = () => {
-  const experiences = [
-    {
-      title: "Frontend Developer",
-      company: "Royal Air Maroc",
-      location: "Casablanca, Morocco",
-      period: "2024 - Present",
-      type: "Full Time",
-      description:
-        "Working as a Frontend Developer at Royal Air Maroc, contributing to the development and maintenance of web and mobile applications that enhance customer experience and operational efficiency.",
-      achievements: [
-        "Développé Développement de la version 2 de RAM Assistant Mobile.",
-        "Développé and maintained Chatbot ATLAS for real-time flight information, support, and services.",
-        "Développé Flight Watch –une application de tableau de bord en temps réel pour surveiller les opérations des aéronefs et les statuts des vols.",
-      ],
-    },
-    {
-      title: "Full Stack Developer",
-      company: "IT Road Consulting",
-      location: "Agadir, Morocco",
-      period: "2023 - 2024",
-      type: "Full Time",
-      description:
-        "Started my professional journey by working on various client websites and learning industry best practices. Gained experience in HTML, CSS, JavaScript, and basic backend technologies.",
-      achievements: [
-        "Participation à la conception et au développement du site web de Fondation Mohamed 6 (FM6).",
-        "Participation à la conception et au développement du site web de l'Agence pour le Développement Agricole (ADA).",
-        "Collaborated closely with the team to identify client needs and implement tailored solutions.",
-      ],
-    },
-  ];
+  const { t } = useTranslation();
+
+  const experiences = t("experience.experienceList", { returnObjects: true });
+
   const skills = [
     { name: "Angular", percentage: 95 },
     { name: "Reactjs", percentage: 90 },
@@ -51,18 +26,19 @@ const ExperienceSection = () => {
         <div className="grid lg:grid-cols-3 gap-16">
           {/* Experience Timeline */}
           <div className="lg:col-span-2">
-            <h2 className="section-header">Professional Experience</h2>
+            <h2 className="section-header">{t("experience.title")}</h2>
+            <p className="portfolio-text-muted mb-10">
+              {t("experience.description")}
+            </p>
 
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
+              {Object.values(experiences).map((exp, index: number) => (
                 <div key={index} className="relative">
-                  {/* Timeline line */}
-                  {index !== experiences.length - 1 && (
-                    <div className="absolute left-6 top-16 w-0.5 h-full bg-[hsl(var(--portfolio-border))]"></div>
+                  {index !== Object.values(experiences).length - 1 && (
+                    <div className="absolute left-6 top-16 w-0.5 h-full bg-[hsl(var(--portfolio-border))]" />
                   )}
 
                   <div className="flex gap-6">
-                    {/* Timeline dot */}
                     <div className="portfolio-orange w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 relative z-10">
                       <BriefcaseBusiness
                         size={20}
@@ -70,20 +46,18 @@ const ExperienceSection = () => {
                       />
                     </div>
 
-                    {/* Content */}
                     <div className="portfolio-card p-6 flex-1 hover:border-[hsl(var(--portfolio-orange))] transition-all duration-300">
                       <div className="flex flex-wrap items-start justify-between mb-4">
                         <div>
                           <h3 className="text-xl font-semibold portfolio-text mb-1">
-                            {exp.title}
+                            {exp.role}
                           </h3>
                           <h4 className="text-lg text-[hsl(var(--portfolio-orange))] mb-2">
                             {exp.company}
                           </h4>
                         </div>
-
                         <span className="portfolio-orange px-3 py-1 rounded-full text-sm font-medium">
-                          {exp.type}
+                          {exp.type ?? "Full Time"}
                         </span>
                       </div>
 
@@ -104,18 +78,20 @@ const ExperienceSection = () => {
 
                       <div className="space-y-2">
                         <h5 className="font-medium portfolio-text">
-                          Key Achievements:
+                          {t("experience.keyAchievements")}
                         </h5>
                         <ul className="space-y-1">
-                          {exp.achievements.map((achievement, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-start gap-2 text-sm portfolio-text-muted"
-                            >
-                              <div className="w-1.5 h-1.5 bg-[hsl(var(--portfolio-orange))] rounded-full mt-2 flex-shrink-0"></div>
-                              <span>{achievement}</span>
-                            </li>
-                          ))}
+                          {exp.achievements.map(
+                            (achievement: string, idx: number) => (
+                              <li
+                                key={idx}
+                                className="flex items-start gap-2 text-sm portfolio-text-muted"
+                              >
+                                <div className="w-1.5 h-1.5 bg-[hsl(var(--portfolio-orange))] rounded-full mt-2 flex-shrink-0" />
+                                <span>{achievement}</span>
+                              </li>
+                            )
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -130,7 +106,7 @@ const ExperienceSection = () => {
             {/* Skills */}
             <div>
               <h3 className="text-xl font-semibold portfolio-text mb-6">
-                Technical Skills
+                {t("technicalSkills.title")}
               </h3>
               <div className="space-y-4">
                 {skills.map((skill, index) => (
