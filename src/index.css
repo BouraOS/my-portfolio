@@ -2,82 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark Portfolio Design System */
-
 @layer base {
   :root {
-    /* Light mode colors (fallback) */
+    /* Light mode colors */
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 0 0% 9%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
-    
+
     --primary: 33 100% 50%;
     --primary-foreground: 0 0% 98%;
-    
+
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 9%;
-    
+
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
-    
+
     --accent: 33 100% 50%;
     --accent-foreground: 0 0% 98%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 0 0% 89%;
     --input: 0 0% 89%;
     --ring: 33 100% 50%;
-    
+
     --radius: 0.75rem;
-    
-    /* Portfolio specific colors */
-    --portfolio-bg: 0 0% 16%;
-    --portfolio-card: 0 0% 20%;
-    --portfolio-sidebar: 0 0% 12%;
-    --portfolio-text: 0 0% 95%;
-    --portfolio-text-muted: 0 0% 70%;
+
+    /* Portfolio specific colors - LIGHT MODE */
+    --portfolio-bg: 0 0% 100%;
+    --portfolio-card: 0 0% 98%;
+    --portfolio-sidebar: 0 0% 96%;
+    --portfolio-text: 0 0% 9%;
+    --portfolio-text-muted: 0 0% 45%;
     --portfolio-orange: 33 100% 50%;
     --portfolio-orange-hover: 33 100% 45%;
-    --portfolio-border: 0 0% 25%;
+    --portfolio-border: 0 0% 89%;
   }
 
   .dark {
-    /* Dark mode is the primary theme */
+    /* Dark mode colors */
     --background: 0 0% 16%;
     --foreground: 0 0% 95%;
-    
+
     --card: 0 0% 20%;
     --card-foreground: 0 0% 95%;
-    
+
     --popover: 0 0% 20%;
     --popover-foreground: 0 0% 95%;
-    
+
     --primary: 33 100% 50%;
     --primary-foreground: 0 0% 12%;
-    
+
     --secondary: 0 0% 25%;
     --secondary-foreground: 0 0% 95%;
-    
+
     --muted: 0 0% 25%;
     --muted-foreground: 0 0% 70%;
-    
+
     --accent: 33 100% 50%;
     --accent-foreground: 0 0% 12%;
-    
+
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 0 0% 25%;
     --input: 0 0% 25%;
     --ring: 33 100% 50%;
-    
+
     /* Portfolio specific dark colors */
     --portfolio-bg: 0 0% 16%;
     --portfolio-card: 0 0% 20%;
@@ -88,16 +86,16 @@
     --portfolio-orange-hover: 33 100% 45%;
     --portfolio-border: 0 0% 25%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-[hsl(var(--portfolio-bg))] text-[hsl(var(--portfolio-text))] font-sans antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    @apply bg-[hsl(var(--portfolio-bg))] text-[hsl(var(--portfolio-text))];
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   html {
@@ -108,56 +106,57 @@
 @layer components {
   .portfolio-container {
     @apply bg-[hsl(var(--portfolio-bg))] min-h-screen;
+    transition: background-color 0.3s ease;
   }
-  
+
   .portfolio-card {
     @apply bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-lg;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
-  
+
   .portfolio-sidebar {
     @apply bg-[hsl(var(--portfolio-sidebar))] border-r border-[hsl(var(--portfolio-border))];
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
-  
+
   .portfolio-text {
     @apply text-[hsl(var(--portfolio-text))];
+    transition: color 0.3s ease;
   }
-  
+
   .portfolio-text-muted {
     @apply text-[hsl(var(--portfolio-text-muted))];
+    transition: color 0.3s ease;
   }
-  
+
   .portfolio-orange {
     @apply bg-[hsl(var(--portfolio-orange))] text-[hsl(var(--portfolio-bg))];
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-  
+
   .portfolio-orange-hover {
-    @apply hover:bg-[hsl(var(--portfolio-orange-hover))] transition-colors duration-200;
+    @apply hover:bg-[hsl(var(--portfolio-orange-hover))];
+    transition: background-color 0.2s ease;
   }
-  
+
   .skill-bar {
     @apply h-2 bg-[hsl(var(--portfolio-border))] rounded-full overflow-hidden;
+    transition: background-color 0.3s ease;
   }
-  
+
   .skill-progress {
-    @apply h-full bg-[hsl(var(--portfolio-orange))] transition-all duration-1000 ease-out;
+    @apply h-full bg-[hsl(var(--portfolio-orange))];
+    transition: all 1s ease-out;
   }
-  
+
   .section-header {
     @apply text-2xl font-bold text-[hsl(var(--portfolio-text))] z-10 mb-8 relative;
+    transition: color 0.3s ease;
   }
-  
+
   .section-header::before {
-    content: '';
+    content: "";
     @apply absolute top-[-8px] left-[-8px] w-12 h-12 rounded-full bg-[hsl(var(--portfolio-orange))] z-[-1];
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease;
   }
 }
