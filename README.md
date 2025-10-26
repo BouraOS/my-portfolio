@@ -22,6 +22,7 @@ A modern, responsive, and accessible personal portfolio website built with React
 
 ## 📋 Table of Contents
 
+- [Demo](#-demo)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
@@ -32,6 +33,10 @@ A modern, responsive, and accessible personal portfolio website built with React
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Contact](#-contact)
+
+## 🌐 Demo
+
+[Live Demo](https://bouraos.netlify.app/)
 
 ## 🛠️ Tech Stack
 
@@ -218,8 +223,8 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email: osamaboura@gmail.com
 - Phone: +212 691-288849
 - Location: Casablanca, Morocco
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/oussama-bouramada-371b612a3/)
-- GitHub: [Your GitHub](https://github.com/BouraOS)
+- LinkedIn: [My LinkedIn](https://www.linkedin.com/in/oussama-bouramada-371b612a3/)
+- GitHub: [My GitHub](https://github.com/BouraOS)
 
 ## 🙏 Acknowledgments
 
