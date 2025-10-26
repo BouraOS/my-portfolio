@@ -4,46 +4,48 @@
 
 @layer base {
   :root {
-    /* Light mode colors */
+    /* Beautiful Light Mode - Warm & Modern */
     --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --foreground: 240 10% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 240 10% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 240 10% 12%;
 
     --primary: 33 100% 50%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 33 15% 96%;
+    --secondary-foreground: 240 10% 12%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 33 15% 96%;
+    --muted-foreground: 240 5% 45%;
 
     --accent: 33 100% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
+    --border: 33 20% 92%;
+    --input: 33 20% 92%;
     --ring: 33 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Portfolio specific colors - LIGHT MODE */
-    --portfolio-bg: 0 0% 100%;
-    --portfolio-card: 0 0% 98%;
-    --portfolio-sidebar: 0 0% 96%;
-    --portfolio-text: 0 0% 9%;
-    --portfolio-text-muted: 0 0% 45%;
-    --portfolio-orange: 33 100% 50%;
-    --portfolio-orange-hover: 33 100% 45%;
-    --portfolio-border: 0 0% 89%;
+    /* Portfolio Light Mode - Premium Warm Design */
+    --portfolio-bg: 35 20% 98%; /* Warm off-white */
+    --portfolio-card: 0 0% 100%; /* Pure white cards */
+    --portfolio-sidebar: 35 25% 97%; /* Slightly warm sidebar */
+    --portfolio-text: 240 10% 12%; /* Deep blue-black */
+    --portfolio-text-muted: 240 5% 45%; /* Warm gray */
+    --portfolio-orange: 33 100% 50%; /* Vibrant orange */
+    --portfolio-orange-hover: 33 100% 45%; /* Darker orange */
+    --portfolio-border: 33 20% 92%; /* Soft warm border */
+    --portfolio-accent-soft: 33 100% 95%; /* Light orange tint */
+    --portfolio-shadow: 240 5% 15%; /* Soft shadow color */
   }
 
   .dark {
@@ -110,13 +112,20 @@
   }
 
   .portfolio-card {
-    @apply bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-lg;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    @apply bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-xl;
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+      box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px 0 hsl(var(--portfolio-shadow) / 0.05);
+  }
+
+  .portfolio-card:hover {
+    box-shadow: 0 4px 12px 0 hsl(var(--portfolio-shadow) / 0.1);
   }
 
   .portfolio-sidebar {
     @apply bg-[hsl(var(--portfolio-sidebar))] border-r border-[hsl(var(--portfolio-border))];
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 2px 0 8px 0 hsl(var(--portfolio-shadow) / 0.05);
   }
 
   .portfolio-text {
@@ -130,13 +139,25 @@
   }
 
   .portfolio-orange {
-    @apply bg-[hsl(var(--portfolio-orange))] text-[hsl(var(--portfolio-bg))];
-    transition: background-color 0.3s ease, color 0.3s ease;
+    @apply bg-[hsl(var(--portfolio-orange))] text-white;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px 0 hsl(var(--portfolio-orange) / 0.3);
+  }
+
+  .portfolio-orange:hover {
+    box-shadow: 0 4px 16px 0 hsl(var(--portfolio-orange) / 0.4);
   }
 
   .portfolio-orange-hover {
     @apply hover:bg-[hsl(var(--portfolio-orange-hover))];
     transition: background-color 0.2s ease;
+  }
+
+  /* Accent background for subtle highlights */
+  .portfolio-accent-soft {
+    @apply bg-[hsl(var(--portfolio-accent-soft))];
+    transition: background-color 0.3s ease;
   }
 
   .skill-bar {
@@ -147,6 +168,7 @@
   .skill-progress {
     @apply h-full bg-[hsl(var(--portfolio-orange))];
     transition: all 1s ease-out;
+    box-shadow: 0 0 8px hsl(var(--portfolio-orange) / 0.5);
   }
 
   .section-header {
