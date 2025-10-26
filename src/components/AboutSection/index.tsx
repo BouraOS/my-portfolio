@@ -1,9 +1,11 @@
+import { lazy } from "react";
 import { AtSign, Calendar, MapPin, Smartphone } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import ProfileSidebar from "./ProfileSidebar";
-import PersonalDetailsGrid from "./PersonalDetailsGrid";
-import Biography from "./Biography";
 import { skills, socialLinks } from "@/constants";
+import { useTranslation } from "react-i18next";
+
+const ProfileSidebar = lazy(() => import("./ProfileSidebar"));
+const PersonalDetailsGrid = lazy(() => import("./PersonalDetailsGrid"));
+const Biography = lazy(() => import("./Biography"));
 
 const AboutSection = () => {
   const { t } = useTranslation();

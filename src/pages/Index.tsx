@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import PortfolioSidebar from "@/components/PortfolioSidebar";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import ContactSection from "@/components/ContactSection";
+import { useState, useEffect, lazy } from "react";
+const PortfolioSidebar = lazy(() => import("@/components/PortfolioSidebar"));
+const HeroSection = lazy(() => import("@/components/HeroSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");

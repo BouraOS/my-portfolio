@@ -1,8 +1,9 @@
+import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
-import TopHeader from "./TopHeader";
-import HeroContent from "./HeroContent";
-import ProfileImageLoader from "./ProfileImage";
+
+const TopHeader = lazy(() => import("./TopHeader"));
+const HeroContent = lazy(() => import("./HeroContent"));
+const ProfileImageLoader = lazy(() => import("./ProfileImage"));
 
 const HeroSection = () => {
   const { i18n, t } = useTranslation();

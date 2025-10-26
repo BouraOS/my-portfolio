@@ -1,9 +1,11 @@
+import { lazy } from "react";
 import { useTranslation } from "react-i18next";
 import createContactConfig from "./createContactConfig";
-import SectionHeader from "./SectionHeader";
-import Footer from "../FooterSection";
-import ContactForm from "./ContactForm";
-import ContactSidebar from "./ContactSidebar";
+
+const SectionHeader = lazy(() => import("./SectionHeader"));
+const Footer = lazy(() => import("../FooterSection"));
+const ContactForm = lazy(() => import("./ContactForm"));
+const ContactSidebar = lazy(() => import("./ContactSidebar"));
 
 const ContactSection = () => {
   const { t } = useTranslation();

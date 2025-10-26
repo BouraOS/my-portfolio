@@ -1,11 +1,13 @@
+import { lazy } from "react";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
-import AnimatedSectionHeader from "./AnimatedSectionHeader";
-import ExperienceCard from "./ExperienceCard";
-import SidebarHeader from "./SidebarHeader";
-import SkillBar from "./SkillBar";
-import EducationCard from "./EducationCard";
 import { useTranslation } from "react-i18next";
 import { skillsRate } from "@/constants";
+
+const AnimatedSectionHeader = lazy(() => import("./AnimatedSectionHeader"));
+const ExperienceCard = lazy(() => import("./ExperienceCard"));
+const SidebarHeader = lazy(() => import("./SidebarHeader"));
+const SkillBar = lazy(() => import("./SkillBar"));
+const EducationCard = lazy(() => import("./EducationCard"));
 
 const ExperienceSection = () => {
   const { t } = useTranslation();

@@ -1,7 +1,9 @@
+import { lazy } from "react";
 import { useTranslation } from "react-i18next";
-import ServicesGrid from "./ServicesGrid";
 import createServiceConfig from "./createServiceConfig";
-import SectionHeader from "./SectionHeader";
+
+const ServicesGrid = lazy(() => import("./ServicesGrid"));
+const SectionHeader = lazy(() => import("./SectionHeader"));
 
 const CallToAction = ({ contactText, buttonText, onContactClick }) => {
   const handleClick = () => {
