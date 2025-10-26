@@ -6,12 +6,7 @@ const createServiceConfig = (t: (t: string) => string) => [
     title: t("services.serviceList.webDevelopment.title"),
     description: t("services.serviceList.webDevelopment.description"),
   },
-  {
-    id: "seo-optimization",
-    icon: Search,
-    title: t("services.serviceList.seoOptimization.title"),
-    description: t("services.serviceList.seoOptimization.description"),
-  },
+
   {
     id: "mobile-development",
     icon: Smartphone,
@@ -23,6 +18,12 @@ const createServiceConfig = (t: (t: string) => string) => [
     icon: Database,
     title: t("services.serviceList.backendDevelopment.title"),
     description: t("services.serviceList.backendDevelopment.description"),
+  },
+  {
+    id: "seo-optimization",
+    icon: Search,
+    title: t("services.serviceList.seoOptimization.title"),
+    description: t("services.serviceList.seoOptimization.description"),
   },
   {
     id: "uiux-design",
