@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-import ContactInfo from "./ContactInfo";
+import TopHeader from "./TopHeader";
 import HeroContent from "./HeroContent";
 import ProfileImageLoader from "./ProfileImage";
 
@@ -14,14 +14,13 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center px-8 lg:px-16"
+      className="min-h-80 lg:min-h-screen py-20 flex items-center px-8 lg:px-16"
       aria-label="Hero section"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header with contact info and language switcher */}
         <header className="flex justify-between items-start mb-16">
-          <ContactInfo />
-          <LanguageSwitcher
+          <TopHeader
             currentLanguage={i18n.language}
             onLanguageChange={changeLanguage}
           />

@@ -18,7 +18,7 @@ const ExperienceCard = ({ exp, index, total }) => {
       {/* Timeline connector */}
       {!isLast && (
         <div
-          className={`absolute left-6 top-16 w-0.5 bg-[hsl(var(--portfolio-border))] transition-all duration-1000 ${
+          className={`hidden md:block absolute left-6 top-16 w-0.5 bg-[hsl(var(--portfolio-border))] transition-all duration-1000 ${
             isInView ? "h-full opacity-100" : "h-0 opacity-0"
           }`}
           style={{ transitionDelay: `${index * 150 + 300}ms` }}
@@ -28,7 +28,7 @@ const ExperienceCard = ({ exp, index, total }) => {
       <div className="flex gap-6">
         {/* Timeline icon */}
         <div
-          className={`portfolio-orange w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 relative z-10 transition-all duration-500 ${
+          className={`hidden md:flex portfolio-orange w-12 h-12 rounded-full items-center justify-center flex-shrink-0 relative z-10 transition-all duration-500 ${
             isInView ? "scale-100 rotate-0" : "scale-0 rotate-180"
           }`}
           style={{ transitionDelay: `${index * 150 + 100}ms` }}

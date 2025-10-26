@@ -55,7 +55,7 @@ const Index = () => {
       />
 
       {/* Main Content */}
-      <div className="ml-20">
+      <div className="sm:px-4 lg:px-16 md:ml-20">
         <HeroSection />
         <AboutSection />
         <ServicesSection />

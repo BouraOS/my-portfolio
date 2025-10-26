@@ -25,7 +25,7 @@ const PortfolioSidebar = ({ activeSection, onSectionChange }) => {
 
   return (
     <aside
-      className="portfolio-sidebar fixed left-0 top-0 h-full w-20 flex flex-col items-center py-6 z-50"
+      className="portfolio-sidebar fixed left-0 top-0 h-full w-20  flex-col items-center py-6 z-50 hidden lg:flex"
       aria-label="Sidebar navigation"
     >
       <SidebarLogo />

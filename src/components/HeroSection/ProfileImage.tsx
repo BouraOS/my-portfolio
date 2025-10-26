@@ -2,7 +2,7 @@ import { Globe } from "lucide-react";
 import { Suspense } from "react";
 
 const ProfileImage = () => (
-  <div className="flex justify-center lg:justify-end">
+  <div className="hidden lg:flex justify-center lg:justify-end">
     <div className="relative">
       <figure className="w-80 h-96 lg:w-96 lg:h-[28rem] portfolio-card rounded-2xl overflow-hidden relative">
         <div

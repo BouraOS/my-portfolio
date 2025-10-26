@@ -1,8 +1,23 @@
+import { cn } from "@/lib/utils";
 import { Sun, Moon } from "lucide-react";
-const ThemeToggle = ({ isDark, onToggle }) => (
+type ThemeToggleProps = {
+  isDark: boolean;
+  onToggle: () => void;
+  className?: string;
+  hideTooltip?: boolean;
+};
+const ThemeToggle = ({
+  isDark,
+  onToggle,
+  className,
+  hideTooltip = false,
+}: ThemeToggleProps) => (
   <button
     onClick={onToggle}
-    className="w-12 h-12 rounded-lg flex items-center justify-center portfolio-text-muted hover:portfolio-text hover:bg-[hsl(var(--portfolio-card))] transition-all duration-200 relative group"
+    className={cn(
+      "w-12 h-12 rounded-lg flex items-center justify-center portfolio-text-muted hover:portfolio-text hover:bg-[hsl(var(--portfolio-card))] transition-all duration-200 relative group",
+      className
+    )}
     aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     aria-pressed={isDark}
   >
@@ -28,9 +43,11 @@ const ThemeToggle = ({ isDark, onToggle }) => (
     </div>
 
     {/* Tooltip */}
-    <span className="absolute left-16 px-2 py-1 bg-[hsl(var(--portfolio-card))] portfolio-text rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap border border-[hsl(var(--portfolio-border))]">
-      {isDark ? "Light mode" : "Dark mode"}
-    </span>
+    {!hideTooltip && (
+      <span className="absolute left-16 px-2 py-1 bg-[hsl(var(--portfolio-card))] portfolio-text rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap border border-[hsl(var(--portfolio-border))]">
+        {isDark ? "Light mode" : "Dark mode"}
+      </span>
+    )}
   </button>
 );
 

@@ -107,7 +107,7 @@
 
 @layer components {
   .portfolio-container {
-    @apply bg-[hsl(var(--portfolio-bg))] min-h-screen;
+    @apply bg-[hsl(var(--portfolio-bg))] min-h-screen w-full;
     transition: background-color 0.3s ease;
   }
 
