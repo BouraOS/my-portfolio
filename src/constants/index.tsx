@@ -25,3 +25,17 @@ export const navigationItems = [
   { id: "experience", icon: BriefcaseBusiness, label: "Experience" },
   { id: "contact", icon: Mail, label: "Contact" },
 ];
+
+export const skillsRate = [
+  { name: "Angular", percentage: 95 },
+  { name: "Reactjs", percentage: 90 },
+  { name: "React Native", percentage: 88 },
+  { name: "Java", percentage: 85 },
+  { name: "Spring Boot", percentage: 80 },
+  { name: "JWT", percentage: 85 },
+  { name: "API REST", percentage: 85 },
+  { name: "MySQL", percentage: 80 },
+  { name: "CI/CD", percentage: 90 },
+  { name: "Keycloak", percentage: 70 },
+  { name: "UI/UX Design", percentage: 60 },
+];

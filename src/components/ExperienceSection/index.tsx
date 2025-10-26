@@ -5,26 +5,13 @@ import SidebarHeader from "./SidebarHeader";
 import SkillBar from "./SkillBar";
 import EducationCard from "./EducationCard";
 import { useTranslation } from "react-i18next";
+import { skillsRate } from "@/constants";
 
 const ExperienceSection = () => {
   const { t } = useTranslation();
 
   const experiences = t("experience.experienceList", { returnObjects: true });
   const educationList = t("education.list", { returnObjects: true });
-
-  const skills = [
-    { name: "Angular", percentage: 95 },
-    { name: "Reactjs", percentage: 90 },
-    { name: "React Native", percentage: 88 },
-    { name: "Java", percentage: 85 },
-    { name: "Spring Boot", percentage: 80 },
-    { name: "JWT", percentage: 85 },
-    { name: "API REST", percentage: 85 },
-    { name: "MySQL", percentage: 80 },
-    { name: "CI/CD", percentage: 90 },
-    { name: "Keycloak", percentage: 70 },
-    { name: "UI/UX Design", percentage: 60 },
-  ];
 
   return (
     <section
@@ -62,7 +49,7 @@ const ExperienceSection = () => {
                 icon={BriefcaseBusiness}
               />
               <div className="space-y-4">
-                {skills.map((skill, index) => (
+                {skillsRate.map((skill, index) => (
                   <SkillBar key={index} skill={skill} index={index} />
                 ))}
               </div>
