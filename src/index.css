@@ -172,7 +172,7 @@
   }
 
   .section-header {
-    @apply text-2xl font-bold text-[hsl(var(--portfolio-text))] z-10 mb-8 relative;
+    @apply text-2xl font-bold text-[hsl(var(--portfolio-text))] z-10 mb-8 relative inline-block;
     transition: color 0.3s ease;
   }
 
