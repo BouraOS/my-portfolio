@@ -9,7 +9,7 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = "Bouramada Oussama - Full Stack Developer | React, Angular, Spring Boot",
+  title = "Bouramada Oussama - Full Stack Developer",
   description = "Full Stack Developer based in Casablanca, Morocco. Expert in React, Angular, React Native, Java, and Spring Boot.",
   lang = "en",
   image = "https://bouraos.netlify.app/og-image.jpg",
