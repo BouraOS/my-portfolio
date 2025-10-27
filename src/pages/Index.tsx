@@ -1,3 +1,4 @@
+import SEO from "@/SEO";
 import { useState, useEffect, lazy } from "react";
 const PortfolioSidebar = lazy(() => import("@/components/PortfolioSidebar"));
 const HeroSection = lazy(() => import("@/components/HeroSection"));
@@ -47,22 +48,25 @@ const Index = () => {
   };
 
   return (
-    <div className="portfolio-container">
-      {/* Sidebar Navigation */}
-      <PortfolioSidebar
-        activeSection={activeSection}
-        onSectionChange={scrollToSection}
-      />
+    <>
+      <SEO />
+      <div className="portfolio-container">
+        {/* Sidebar Navigation */}
+        <PortfolioSidebar
+          activeSection={activeSection}
+          onSectionChange={scrollToSection}
+        />
 
-      {/* Main Content */}
-      <div className="sm:px-4 lg:px-16 md:ml-20">
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <ExperienceSection />
-        <ContactSection />
+        {/* Main Content */}
+        <div className="sm:px-4 lg:px-16 md:ml-20">
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <ExperienceSection />
+          <ContactSection />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
