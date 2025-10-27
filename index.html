@@ -22,6 +22,88 @@
     <!-- Fonts performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD structured data: Person + Website + ProfessionalService -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://bouraos.netlify.app/#person",
+            "name": "Bouramada Oussama",
+            "givenName": "Oussama",
+            "familyName": "Bouramada",
+            "url": "https://bouraos.netlify.app/",
+            "image": "https://bouraos.netlify.app/images/photo-profile.webp",
+            "jobTitle": "Full Stack Developer",
+            "description": "Experienced Full Stack Developer specializing in React, Angular, React Native, Java, and Spring Boot.",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Freelance Developer"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Casablanca",
+              "addressRegion": "Casablanca-Settat",
+              "addressCountry": "MA"
+            },
+            "email": "osamaboura@gmail.com",
+            "telephone": "+212691288849",
+            "sameAs": [
+              "https://www.linkedin.com/in/oussama-bouramada-371b612a3/",
+              "https://github.com/BouraOS"
+            ],
+            "knowsAbout": [
+              "React",
+              "Angular",
+              "React Native",
+              "TypeScript",
+              "JavaScript",
+              "Java",
+              "Spring Boot",
+              "REST API",
+              "JWT Authentication",
+              "MySQL",
+              "CI/CD",
+              "Keycloak"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://bouraos.netlify.app/#website",
+            "name": "Bouramada Oussama Portfolio",
+            "url": "https://bouraos.netlify.app/",
+            "inLanguage": ["en", "fr"],
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://bouraos.netlify.app/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://bouraos.netlify.app/#service",
+            "name": "Bouramada Oussama - Full Stack Development Services",
+            "image": "https://bouraos.netlify.app/images/photo-profile.webp",
+            "url": "https://bouraos.netlify.app/",
+            "telephone": "+212691288849",
+            "email": "osamaboura@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Casablanca",
+              "addressCountry": "MA"
+            },
+            "serviceType": [
+              "Web Development",
+              "Mobile App Development",
+              "Frontend Development",
+              "Backend Development"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
