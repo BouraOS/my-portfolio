@@ -29,7 +29,7 @@ const ProfileImage = () => (
 
       <div
         className="absolute -bottom-4 -left-4 w-16 h-16 bg-[hsl(var(--portfolio-card))] border border-[hsl(var(--portfolio-border))] rounded-full flex items-center justify-center"
-        aria-label="Online status indicator"
+        aria-hidden="true"
       >
         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
       </div>

@@ -15,11 +15,11 @@ function ProfileImageComponent() {
           aria-hidden="true"
         ></div>
         <img
+          loading="lazy"
           src="/images/photo-profile.webp"
           alt="Bouramada Oussama - Full Stack Developer portrait"
           width={256}
           height={256}
-          loading="lazy"
           className="object-cover w-full h-full rounded-full"
         />
       </div>

@@ -5,6 +5,7 @@ const HeroSection = lazy(() => import("@/components/HeroSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
+const ProjectsSection = lazy(() => import("@/components/ProjectsSection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
 
 const Index = () => {
@@ -13,7 +14,7 @@ const Index = () => {
   // Auto-detect active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services", "experience", "contact"];
+      const sections = ["home", "about", "services", "experience", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -63,6 +64,7 @@ const Index = () => {
           <AboutSection />
           <ServicesSection />
           <ExperienceSection />
+          <ProjectsSection />
           <ContactSection />
         </div>
       </div>

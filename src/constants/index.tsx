@@ -1,5 +1,5 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Home, User, Code, Mail, BriefcaseBusiness } from "lucide-react";
+import { Home, User, Code, Mail, BriefcaseBusiness, FolderOpen } from "lucide-react";
 export const socialLinks = [
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
   { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
@@ -23,6 +23,7 @@ export const navigationItems = [
   { id: "about", icon: User, label: "About" },
   { id: "services", icon: Code, label: "Services" },
   { id: "experience", icon: BriefcaseBusiness, label: "Experience" },
+  { id: "projects", icon: FolderOpen, label: "Projects" },
   { id: "contact", icon: Mail, label: "Contact" },
 ];
 

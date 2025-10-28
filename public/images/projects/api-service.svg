@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad5)"/>
+  <rect x="50" y="50" width="300" height="200" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2" rx="10"/>
+  <rect x="80" y="80" width="60" height="40" fill="rgba(255,255,255,0.8)" rx="5"/>
+  <rect x="160" y="80" width="60" height="40" fill="rgba(255,255,255,0.8)" rx="5"/>
+  <rect x="240" y="80" width="60" height="40" fill="rgba(255,255,255,0.8)" rx="5"/>
+  <line x1="140" y1="100" x2="160" y2="100" stroke="#a8edea" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="100" x2="240" y2="100" stroke="#a8edea" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a8edea"/>
+    </marker>
+  </defs>
+  <rect x="80" y="150" width="240" height="60" fill="rgba(255,255,255,0.8)" rx="5"/>
+  <text x="200" y="175" text-anchor="middle" fill="#a8edea" font-family="Arial, sans-serif" font-size="16" font-weight="bold">API Gateway</text>
+  <text x="200" y="195" text-anchor="middle" fill="rgba(0,0,0,0.6)" font-family="Arial, sans-serif" font-size="12">RESTful Services</text>
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">API Service</text>
+  <text x="200" y="280" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="14">Spring Boot + Docker</text>
+</svg>

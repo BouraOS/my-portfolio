@@ -148,5 +148,73 @@
         "period": "2021"
       }
     }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "A showcase of my recent work and personal projects demonstrating my skills in web and mobile development.",
+    "filterBy": "Filter by",
+    "noProjects": "No projects found",
+    "tryDifferentFilter": "Try selecting a different filter",
+    "filters": {
+      "all": "All Projects",
+      "web": "Web Apps",
+      "mobile": "Mobile Apps",
+      "fullstack": "Full Stack",
+      "backend": "Backend"
+    },
+    "list": [
+      {
+        "id": "time-tracking",
+        "title": "Time Tracking System",
+        "shortDescription": "Comprehensive time tracking and productivity management platform for teams and clients.",
+        "longDescription": "A full-stack application built with Angular and Spring Boot that enables teams to track working hours, manage projects, and generate detailed reports. The system includes user and role management, interactive dashboards, and real-time analytics to enhance productivity and transparency.",
+        "image": "/images/projects/TimeSheet.png",
+        "technologies": [
+          "Angular 17",
+          "Spring Boot",
+          "PostgreSQL",
+          "PrimeNG",
+          "JWT",
+          "TailwindCSS"
+        ],
+        "category": "fullstack",
+        "features": {
+          "dashboard": "Interactive analytics dashboard with charts and KPIs",
+          "rbac": "Role-Based Access Control for Admin, Manager, and User",
+          "pdf": "Dynamic PDF report generation for timesheets and summaries",
+          "filtering": "Advanced server-side filtering, search, and pagination",
+          "calendar": "Integrated calendar view for project and task scheduling"
+        },
+        "liveUrl": "https://your-live-demo-link.com",
+        "githubUrl": "https://github.com/yourusername/time-tracking-system",
+        "status": "completed",
+        "year": 2025
+      },
+      {
+        "id": "ram-assistant",
+        "title": "RAM Assistant",
+        "shortDescription": "Application mobile intelligente pour améliorer l’expérience de voyage avec Royal Air Maroc.",
+        "longDescription": "RAM Assistant est une application mobile innovante, conçue pour offrir une expérience de voyage fluide et personnalisée avec Royal Air Maroc. Dès l’achat du billet, l’utilisateur peut consulter les détails de ses vols, découvrir ses avantages, et préparer son voyage grâce aux informations sur la météo, les activités à destination et les services disponibles. L’assistant permet également de commander un repas spécial, demander une assistance, vérifier les exigences de visa et bien plus encore.",
+        "image": "/images/projects/ram-assistant.webp",
+        "technologies": [
+          "React Native",
+          "TypeScript",
+          "Redux Toolkit",
+          "REST API",
+          "AsyncStorage"
+        ],
+        "category": "mobile",
+        "features": {
+          "flightTracking": "Suivi des vols et des informations de voyage en temps réel",
+          "userServices": "Commande de repas spéciaux et demande d’assistance personnalisée",
+          "travelInfo": "Accès aux informations sur la météo, les activités et les visas",
+          "notifications": "Alertes et rappels automatiques avant le départ",
+          "offlineMode": "Consultation des données essentielles sans connexion Internet"
+        },
+        "liveUrl": "https://play.google.com/store/apps/details?id=com.ram1",
+        "status": "terminé",
+        "year": 2025
+      }
+    ]
   }
 }
