@@ -1,5 +1,12 @@
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Home, User, Code, Mail, BriefcaseBusiness, FolderOpen } from "lucide-react";
+import {
+  Home,
+  User,
+  Code,
+  Mail,
+  BriefcaseBusiness,
+  FolderOpen,
+} from "lucide-react";
 export const socialLinks = [
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
   { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
@@ -39,4 +46,11 @@ export const skillsRate = [
   { name: "CI/CD", percentage: 90 },
   { name: "Keycloak", percentage: 70 },
   { name: "UI/UX Design", percentage: 60 },
+];
+export const filterOptions = [
+  { value: "all", label: "All Projects" },
+  { value: "web", label: "Web Apps" },
+  { value: "mobile", label: "Mobile Apps" },
+  { value: "fullstack", label: "Full Stack" },
+  { value: "backend", label: "Backend" },
 ];

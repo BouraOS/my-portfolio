@@ -14,7 +14,14 @@ const Index = () => {
   // Auto-detect active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services", "experience", "projects", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "services",
+        "experience",
+        "projects",
+        "contact",
+      ];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
