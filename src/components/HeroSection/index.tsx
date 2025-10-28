@@ -8,8 +8,17 @@ const ProfileImageLoader = lazy(() => import("./ProfileImage"));
 const HeroSection = () => {
   const { i18n, t } = useTranslation();
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+  };
+  const downloadCV = () => {
+    const lang = i18n.language;
+    // const cvUrl = `/cv/bouramada-oussama-cv-${lang}.pdf`;
+    const cvUrl = `/cv/bouramada-oussama-cv-fr.pdf`;
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = `Bouramada-Oussama-CV-${lang.toUpperCase()}.pdf`;
+    link.click();
   };
 
   return (
@@ -29,7 +38,7 @@ const HeroSection = () => {
 
         {/* Main hero content */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <HeroContent t={t} />
+          <HeroContent t={t} downloadCV={downloadCV} />
           <ProfileImageLoader />
         </div>
       </div>
