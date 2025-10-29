@@ -186,7 +186,7 @@
           "calendar": "Vue calendrier intégrée pour la planification des projets et des tâches"
         },
         "liveUrl": "https://ton-lien-demo.com",
-        "githubUrl": "https://github.com/tonpseudo/time-tracking-system",
+        "githubUrl": "https://github.com/BouraOS/TMS",
         "status": "terminé",
         "year": 2025
       },
@@ -211,8 +211,7 @@
           "notifications": "Automatic alerts and reminders before departure",
           "offlineMode": "View essential data even without an Internet connection"
         },
-        "liveUrl": "https://your-live-demo-link.com",
-        "githubUrl": "https://github.com/yourusername/ram-assistant",
+        "liveUrl": "https://play.google.com/store/apps/details?id=com.ram1",
         "status": "completed",
         "year": 2025
       }

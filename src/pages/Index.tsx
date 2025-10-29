@@ -14,35 +14,21 @@ const Index = () => {
 
   // Auto-detect active section based on scroll position
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "home",
-        "about",
-        "services",
-        "experience",
-        "projects",
-        "contact",
-      ];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetBottom = offsetTop + element.offsetHeight;
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setActiveSection(section);
-            break;
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
           }
-        }
-      }
-    };
+        });
+      },
+      { threshold: 0.3 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
+    sections.forEach((section) => observer.observe(section));
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId: string) => {

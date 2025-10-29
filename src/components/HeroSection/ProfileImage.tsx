@@ -14,7 +14,8 @@ const ProfileImage = () => (
           alt="Bouramada Oussama - Full Stack Developer"
           width={384}
           height={448}
-          loading="lazy"
+          fetchPriority="high"
+          decoding="async"
           className="object-cover w-full h-full"
         />
       </figure>
