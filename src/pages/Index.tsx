@@ -1,8 +1,10 @@
 import { useState, useEffect, lazy } from "react";
 import SEO from "@/SEO";
 
-const PortfolioSidebar = lazy(() => import("@/components/PortfolioSidebar"));
-const HeroSection = lazy(() => import("@/components/HeroSection"));
+// const HeroSection = lazy(() => import("@/components/HeroSection"));
+// const PortfolioSidebar = lazy(() => import("@/components/PortfolioSidebar"));
+import HeroSection from "@/components/HeroSection";
+import PortfolioSidebar from "@/components/PortfolioSidebar";
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
