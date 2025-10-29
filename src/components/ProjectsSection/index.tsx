@@ -1,13 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Filter, X } from "lucide-react";
 import useInView from "@/hooks/useInView";
-import FilterButton from "./FilterButton";
-import { filterOptions } from "@/constants";
 import ProjectCard from "./ProjectCard";
 import FilterControls from "./FilterControls";
 
-// Project Interface
 export interface Project {
   id: string;
   title: string;
@@ -25,7 +21,6 @@ export interface Project {
   year: number;
 }
 
-// Main ProjectsSection Component
 const ProjectsSection: React.FC = () => {
   const { t } = useTranslation();
   const [selectedFilter, setSelectedFilter] = useState("all");

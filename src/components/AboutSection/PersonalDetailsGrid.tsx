@@ -38,7 +38,6 @@ const PersonalDetailItem = ({ icon: Icon, label, value, isContact }) => {
   return <div>{content}</div>;
 };
 
-// Personal Details Grid Component
 const PersonalDetailsGrid = ({ details }) => (
   <div className="grid md:grid-cols-2 gap-6 mb-8" role="list">
     {details.map((detail, index) => (

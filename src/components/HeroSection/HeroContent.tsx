@@ -1,7 +1,6 @@
 import { Download } from "lucide-react";
 import StatsSection from "./StatsSection";
 
-// Hero Content Component
 const HeroContent = ({ t, downloadCV }) => (
   <div className="space-y-8">
     <header>

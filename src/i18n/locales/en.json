@@ -19,8 +19,8 @@
       "birthDate": { "label": "Birth Date", "value": "February 19, 1997" },
       "age": { "label": "Age", "value": "28 Years" },
       "address": { "label": "Address", "value": "Casablanca, Morocco" },
-      "email": "Email",
-      "phone": "Phone"
+      "email": { "label": "Email", "value": "osamaboura@gmail.com" },
+      "phone": { "label": "Phone", "value": "+212 691-288849" }
     }
   },
   "services": {
@@ -117,13 +117,13 @@
     },
     "form": {
       "title": "Send Message",
-      "name": "Full Name *",
+      "name": "Full Name",
       "namePlaceholder": "Enter your full name",
-      "email": "Email Address *",
+      "email": "Email Address",
       "emailPlaceholder": "Enter your email",
-      "subject": "Subject *",
+      "subject": "Subject",
       "subjectPlaceholder": "What is this about?",
-      "message": "Message *",
+      "message": "Message",
       "messagePlaceholder": "Tell me about your project...",
       "send": "Send Message"
     },

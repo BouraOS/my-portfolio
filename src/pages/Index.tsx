@@ -1,5 +1,6 @@
-import SEO from "@/SEO";
 import { useState, useEffect, lazy } from "react";
+import SEO from "@/SEO";
+
 const PortfolioSidebar = lazy(() => import("@/components/PortfolioSidebar"));
 const HeroSection = lazy(() => import("@/components/HeroSection"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));

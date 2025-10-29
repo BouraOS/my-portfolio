@@ -12,12 +12,12 @@ const HeroSection = () => {
     i18n.changeLanguage(lang);
   };
   const downloadCV = () => {
-    const lang = i18n.language;
+    // const lang = i18n.language;
     // const cvUrl = `/cv/bouramada-oussama-cv-${lang}.pdf`;
     const cvUrl = `/cv/bouramada-oussama-cv-fr.pdf`;
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = `Bouramada-Oussama-CV-${lang.toUpperCase()}.pdf`;
+    link.download = `Bouramada-Oussama-CV-fr.pdf`;
     link.click();
   };
 
@@ -28,15 +28,14 @@ const HeroSection = () => {
       aria-label="Hero section"
     >
       <div className="max-w-7xl mx-auto w-full">
-        {/* Header with contact info and language switcher */}
         <header className="flex justify-between items-start mb-16">
           <TopHeader
+            t={t}
             currentLanguage={i18n.language}
             onLanguageChange={changeLanguage}
           />
         </header>
 
-        {/* Main hero content */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <HeroContent t={t} downloadCV={downloadCV} />
           <ProfileImageLoader />

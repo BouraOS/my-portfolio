@@ -19,8 +19,8 @@
       "birthDate": { "label": "Date de naissance", "value": "19 février 1997" },
       "age": { "label": "Âge", "value": "28 ans" },
       "address": { "label": "Adresse", "value": "Casablanca, Maroc" },
-      "email": "Email",
-      "phone": "Téléphone"
+      "email": { "label": "Email", "value": "osamaboura@gmail.com" },
+      "phone": { "label": "Téléphone", "value": "+212 691-288849" }
     }
   },
   "services": {

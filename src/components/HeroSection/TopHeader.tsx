@@ -3,7 +3,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "../PortfolioSidebar/ThemeToggle";
 import { useTheme } from "@/hooks/useTheme";
 
-const TopHeader = ({ currentLanguage, onLanguageChange }) => {
+const TopHeader = ({ currentLanguage, onLanguageChange, t }) => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
@@ -19,7 +19,7 @@ const TopHeader = ({ currentLanguage, onLanguageChange }) => {
           aria-label="Phone number"
         >
           <Phone size={16} aria-hidden="true" />
-          <span>+212 691-288849</span>
+          <span>{t("biography.info.phone.value")}</span>
         </a>
         <a
           href="mailto:osamaboura@gmail.com"
@@ -27,7 +27,7 @@ const TopHeader = ({ currentLanguage, onLanguageChange }) => {
           aria-label="Email address"
         >
           <Mail size={16} aria-hidden="true" />
-          <span>osamaboura@gmail.com</span>
+          <span>{t("biography.info.email.value")}</span>
         </a>
       </address>
       <LanguageSwitcher

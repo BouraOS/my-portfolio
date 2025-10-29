@@ -1,6 +1,5 @@
 import { FormFieldProps } from "../ContactSection/type";
 
-// Text Input Field
 const TextInput = ({
   id,
   name,

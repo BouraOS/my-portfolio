@@ -1,11 +1,9 @@
 import { lazy, Suspense } from "react";
 import SocialLinks from "./SocialLinks";
-// Lazy load the profile image component
 const ProfileImage = lazy(() =>
   Promise.resolve({ default: ProfileImageComponent })
 );
 
-// Profile Image Component
 function ProfileImageComponent() {
   return (
     <figure className="relative mb-8">

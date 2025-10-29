@@ -1,4 +1,3 @@
-// Contact Info Item
 const ContactInfoCard = ({ info }) => {
   const Icon = info.icon;
   const content = (

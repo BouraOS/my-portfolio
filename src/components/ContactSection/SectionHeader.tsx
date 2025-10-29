@@ -1,4 +1,3 @@
-// Section Header
 const SectionHeader = ({
   title,
   subtitle,

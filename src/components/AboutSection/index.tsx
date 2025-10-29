@@ -32,14 +32,14 @@ const AboutSection = () => {
       icon: MapPin,
     },
     {
-      label: t("biography.info.email"),
-      value: "osamaboura@gmail.com",
+      label: t("biography.info.email.label"),
+      value: t("biography.info.email.value"),
       icon: AtSign,
       isContact: "email",
     },
     {
-      label: t("biography.info.phone"),
-      value: "+212 691-288849",
+      label: t("biography.info.phone.label"),
+      value: t("biography.info.phone.value"),
       icon: Smartphone,
       isContact: "phone",
     },

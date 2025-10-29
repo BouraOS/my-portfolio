@@ -2,7 +2,6 @@ import { MessageSquare } from "lucide-react";
 import ContactInfoList from "./ContactInfoList";
 import AvailabilityCard from "./AvailabilityCard";
 
-// Stats Card
 const StatsCard = ({ t }) => (
   <article className="portfolio-card p-6">
     <header className="flex items-center space-x-3 mb-4">
@@ -42,10 +41,9 @@ const StatsCard = ({ t }) => (
   </article>
 );
 
-// Sidebar Component
 const ContactSidebar = ({ contactInfo, t }) => (
   <aside className="space-y-8">
-    <ContactInfoList contactInfo={contactInfo} />
+    <ContactInfoList contactInfo={contactInfo} t={t} />
     <AvailabilityCard t={t} />
     <StatsCard t={t} />
   </aside>

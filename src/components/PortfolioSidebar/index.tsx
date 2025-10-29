@@ -14,7 +14,6 @@ const SidebarLogo = () => (
   </div>
 );
 
-// Main Sidebar Component
 const PortfolioSidebar = ({ activeSection, onSectionChange }) => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
@@ -29,13 +28,11 @@ const PortfolioSidebar = ({ activeSection, onSectionChange }) => {
       aria-label="Sidebar navigation"
     >
       <SidebarLogo />
-
       <SidebarNavigation
         items={navigationItems}
         activeSection={activeSection}
         onSectionChange={onSectionChange}
       />
-
       <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
     </aside>
   );

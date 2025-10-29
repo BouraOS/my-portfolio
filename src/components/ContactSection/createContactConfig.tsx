@@ -5,19 +5,19 @@ const createContactConfig = (t: (t: string) => string) => [
     title: t("contact.email.title"),
     value: "osamaboura@gmail.com",
     subtitle: t("contact.email.subtitle"),
-    href: "mailto:osamaboura@gmail.com",
+    href: `mailto:${t("biography.info.email.value")}`,
   },
   {
     icon: Phone,
     title: t("contact.phone.title"),
-    value: "+212 691-288849",
+    value: t("biography.info.phone.value"),
     subtitle: t("contact.phone.subtitle"),
-    href: "tel:+212691288849",
+    href: `tel:${t("biography.info.phone.value")}`,
   },
   {
     icon: MapPin,
     title: t("contact.location.title"),
-    value: "Casablanca, Morocco",
+    value: t("biography.info.address.value"),
     subtitle: t("contact.location.subtitle"),
   },
 ];

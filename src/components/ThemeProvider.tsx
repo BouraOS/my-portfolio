@@ -1,11 +1,5 @@
 import { ThemeProviderContext } from "@/context/ThemeProviderContext";
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  ReactNode,
-} from "react";
+import { useEffect, useState, ReactNode } from "react";
 
 export type Theme = "dark" | "light" | "system";
 
