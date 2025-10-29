@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Bouramada Oussama - Full Stack Developer</title>
 
-    <!-- Basic fallback SEO -->
-    <meta
-      name="description"
-      content="Portfolio of Bouramada Oussama, Full Stack Developer specialized in React, Angular, React Native, Java, and Spring Boot."
+    <!-- ✅ Performance: Preconnect -->
+    <link rel="preconnect" href="https://bouraos.netlify.app" crossorigin />
+    <link rel="dns-prefetch" href="https://bouraos.netlify.app" />
+
+    <!-- ✅ Preload CSS -->
+    <link
+      rel="preload"
+      href="/assets/index-DM_Ff6tb.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link rel="stylesheet" href="/assets/index-DM_Ff6tb.css"
+    /></noscript>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -32,7 +40,13 @@
       type="image/webp"
     />
 
-    <!-- JSON-LD structured data: Person + Website + ProfessionalService -->
+    <!-- Basic SEO -->
+    <meta
+      name="description"
+      content="Portfolio of Bouramada Oussama, Full Stack Developer specialized in React, Angular, React Native, Java, and Spring Boot."
+    />
+
+    <!-- ✅ Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -83,12 +97,7 @@
             "@id": "https://bouraos.netlify.app/#website",
             "name": "Bouramada Oussama Portfolio",
             "url": "https://bouraos.netlify.app/",
-            "inLanguage": ["en", "fr"],
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://bouraos.netlify.app/?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
+            "inLanguage": ["en", "fr"]
           },
           {
             "@type": "ProfessionalService",
@@ -113,13 +122,28 @@
         ]
       }
     </script>
+
+    <!-- ✅ Dark / Light Mode -->
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.classList.add("dark");
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
   </head>
 
   <body>
-    <div id="root"></div>
+    <!-- ✅ Main landmark for accessibility -->
+    <main id="root"></main>
+
+    <!-- React entry -->
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- No JavaScript fallback -->
+    <!-- No JS fallback -->
     <noscript>
       <div
         style="
