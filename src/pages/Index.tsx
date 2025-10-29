@@ -1,9 +1,7 @@
-import { useState, useEffect, lazy } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import SEO from "@/SEO";
-
-// const HeroSection = lazy(() => import("@/components/HeroSection"));
-// import PortfolioSidebar from "@/components/PortfolioSidebar";
 import HeroSection from "@/components/HeroSection";
+
 const PortfolioSidebar = lazy(() => import("@/components/PortfolioSidebar"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
@@ -14,55 +12,53 @@ const ContactSection = lazy(() => import("@/components/ContactSection"));
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
 
-  // Auto-detect active section based on scroll position
+  // ✅ Détection intelligente via IntersectionObserver
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { threshold: 0.3 }
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveSection(sectionId);
     }
-    setActiveSection(sectionId);
   };
 
   return (
     <>
       <SEO />
       <div className="portfolio-container">
-        {/* Sidebar Navigation */}
-        <PortfolioSidebar
-          activeSection={activeSection}
-          onSectionChange={scrollToSection}
-        />
+        <Suspense fallback={<div className="loader">Chargement...</div>}>
+          <PortfolioSidebar
+            activeSection={activeSection}
+            onSectionChange={scrollToSection}
+          />
 
-        {/* Main Content */}
-        <div className="sm:px-4 lg:px-16 md:ml-20">
-          <HeroSection />
-          <AboutSection />
-          <ServicesSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <ContactSection />
-        </div>
+          <main
+            className="sm:px-4 lg:px-16 md:ml-20"
+            role="main"
+            id="main-content"
+          >
+            <HeroSection />
+            <AboutSection />
+            <ServicesSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <ContactSection />
+          </main>
+        </Suspense>
       </div>
     </>
   );
