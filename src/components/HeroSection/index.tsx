@@ -1,6 +1,17 @@
 import { lazy } from "react";
 import { useTranslation } from "react-i18next";
 
+const cvFiles = {
+  en: {
+    url: "/cv/Bouramada_0ussama_Fullstack_CV_EN.pdf",
+    filename: "Bouramada_0ussama_Fullstack_CV_EN.pdf",
+  },
+  fr: {
+    url: "/cv/Bouramada_0ussama_Fullstack_CV_FR.pdf",
+    filename: "Bouramada_0ussama_Fullstack_CV_FR.pdf",
+  },
+} as const;
+
 const TopHeader = lazy(() => import("./TopHeader"));
 const HeroContent = lazy(() => import("./HeroContent"));
 const ProfileImageLoader = lazy(() => import("./ProfileImage"));
@@ -11,13 +22,14 @@ const HeroSection = () => {
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
+
   const downloadCV = () => {
-    // const lang = i18n.language;
-    // const cvUrl = `/cv/bouramada-oussama-cv-${lang}.pdf`;
-    const cvUrl = `/cv/bouramada-oussama-cv-fr.pdf`;
+    const language = i18n.language as keyof typeof cvFiles;
+    const { url, filename } = cvFiles[language] ?? cvFiles.en;
     const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = `Bouramada-Oussama-CV-fr.pdf`;
+    link.href = url;
+    link.download = filename;
+    link.rel = "noopener";
     link.click();
   };
 
