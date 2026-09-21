@@ -25,7 +25,9 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
           alt={project.title}
           className="w-full h-48 transition-transform duration-300 group-hover:scale-110"
           style={{
-            objectFit: project.category === "mobile" ? "cover" : "fill",
+            objectFit: project.imageStyle,
+            width: "100%",
+            height: "16rem", // 48 * 4 = 192px = 12rem
           }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
@@ -72,15 +74,15 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
               project.status === "completed"
                 ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
                 : project.status === "in-progress"
-                ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
-                : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                  ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+                  : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
             }`}
           >
             {project.status === "completed"
               ? "Completed"
               : project.status === "in-progress"
-              ? "In Progress"
-              : "Planned"}
+                ? "In Progress"
+                : "Planned"}
           </span>
         </div>
 

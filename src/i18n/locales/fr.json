@@ -166,18 +166,19 @@
       {
         "id": "time-tracking",
         "title": "Système de Gestion du Temps",
-        "shortDescription": "Plateforme complète de suivi du temps et de gestion de la productivité pour les équipes et les clients.",
+        "shortDescription": "Plateforme complète de suivi du temps et de gestion de la productivité pour les équipes.",
         "longDescription": "Application full-stack développée avec Angular et Spring Boot, permettant aux équipes de suivre leurs heures de travail, gérer les projets et générer des rapports détaillés. Le système intègre la gestion des utilisateurs et des rôles, un tableau de bord interactif et des analyses en temps réel pour améliorer la productivité et la transparence.",
         "image": "/images/projects/TimeSheet.png",
+        "imageStyle": "fill",
         "technologies": [
-          "Angular 17",
+          "Angular",
           "Spring Boot",
           "PostgreSQL",
           "PrimeNG",
           "JWT",
           "TailwindCSS"
         ],
-        "category": "fullstack",
+        "category": "web",
         "features": {
           "dashboard": "Tableau de bord analytique interactif avec graphiques et indicateurs clés",
           "rbac": "Contrôle d’accès basé sur les rôles (Admin, Manager, Utilisateur)",
@@ -193,9 +194,10 @@
       {
         "id": "ram-assistant",
         "title": "RAM Assistant",
-        "shortDescription": "Smart mobile app designed to enhance the travel experience with Royal Air Maroc.",
-        "longDescription": "RAM Assistant is an innovative mobile application created to deliver a smooth and personalized travel experience with Royal Air Maroc. From the moment you purchase your ticket, you can access detailed flight information, discover your travel benefits, and prepare for your trip with insights on weather conditions and destination activities. The assistant also allows users to order special meals, request assistance, check visa requirements, and much more.",
+        "shortDescription": "Application mobile intelligente conçue pour améliorer l’expérience de voyage avec Royal Air Maroc.",
+        "longDescription": "RAM Assistant est une application mobile innovante conçue pour offrir une expérience de voyage fluide et personnalisée avec Royal Air Maroc. Les utilisateurs peuvent consulter leurs informations de vol, leurs avantages voyage, la météo, les activités à destination, commander des repas spéciaux, demander une assistance, vérifier les exigences de visa et bien plus encore.",
         "image": "/images/projects/ram-assistant.webp",
+        "imageStyle": "cover",
         "technologies": [
           "React Native",
           "TypeScript",
@@ -214,6 +216,78 @@
         "liveUrl": "https://play.google.com/store/apps/details?id=com.ram1",
         "status": "completed",
         "year": 2025
+      },
+      {
+        "id": "budget-flow",
+        "title": "Budget Flow",
+        "shortDescription": "Plateforme web de gestion des demandes budgétaires avec workflow de validation multi-étapes.",
+        "longDescription": "Application web développée from scratch avec React.js et TypeScript pour gérer les demandes budgétaires au sein d'un environnement professionnel. La plateforme intègre un workflow de validation multi-étapes ainsi qu'un contrôle d'accès basé sur les rôles afin de gérer les permissions et les actions disponibles selon le profil utilisateur.",
+        "image": "/images/projects/budget-flow.webp",
+        "imageStyle": "fill",
+        "technologies": [
+          "React.js",
+          "TypeScript",
+          "REST API",
+          "RBAC",
+          "TailwindCSS",
+          "Shadcn"
+        ],
+        "category": "web",
+        "features": {
+          "workflow": "Workflow de validation des demandes budgétaires en plusieurs étapes",
+          "rbac": "Contrôle d'accès basé sur les rôles et les permissions",
+          "requestManagement": "Création et gestion des demandes budgétaires",
+          "frontendArchitecture": "Architecture frontend modulaire et composants réutilisables"
+        },
+        "githubUrl": "",
+        "status": "completed",
+        "year": 2026
+      },
+      {
+        "id": "flight-watch",
+        "title": "Flight Watch",
+        "shortDescription": "Application mobile temps réel dédiée au suivi des vols et aux opérations des équipages.",
+        "longDescription": "Application mobile temps réel développée avec React Native et Expo pour les équipages dans un environnement opérationnel aéronautique. L'application permet de gérer les vols, les passagers, les équipages et différentes données opérationnelles, avec une attention particulière portée à la réactivité et aux performances.",
+        "image": "/images/projects/flight-watch.webp",
+        "imageStyle": "fill",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "WebSockets",
+          "Sqlite"
+        ],
+        "category": "mobile",
+        "features": {
+          "realtime": "Mise à jour des données opérationnelles en temps réel",
+          "flightManagement": "Gestion et suivi des informations de vol",
+          "crewManagement": "Gestion des équipages et des données opérationnelles",
+          "performance": "Optimisation des re-renders et amélioration de la réactivité"
+        },
+        "liveUrl": "",
+        "githubUrl": "",
+        "status": "completed",
+        "year": 2025
+      },
+      {
+        "id": "skyshop",
+        "title": "Skyshop",
+        "shortDescription": "Plateforme e-commerce web et mobile dédiée à la vente de produits duty-free.",
+        "longDescription": "Plateforme e-commerce développée avec React Native et React.js pour les opérations duty-free. Le projet comprend la maintenance et l'évolution de fonctionnalités ainsi que l'optimisation des performances et de la stabilité de l'application mobile en production.",
+        "image": "/images/projects/skyshop.webp",
+        "imageStyle": "fill",
+        "technologies": ["React Native", "React.js", "TypeScript", "REST API"],
+        "category": "web",
+        "features": {
+          "ecommerce": "Fonctionnalités e-commerce pour une plateforme duty-free",
+          "mobile": "Application mobile développée avec React Native",
+          "web": "Interface web développée avec React.js",
+          "performance": "Optimisation des performances et de la stabilité en production"
+        },
+        "liveUrl": "",
+        "githubUrl": "",
+        "status": "completed",
+        "year": 2024
       }
     ]
   }

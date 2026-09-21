@@ -10,6 +10,7 @@ export interface Project {
   shortDescription: string;
   longDescription: string;
   image: string;
+  imageStyle: "cover" | "contain" | "fill";
   technologies: string[];
   category: "web" | "mobile" | "fullstack" | "backend";
   features: {
@@ -37,7 +38,7 @@ const ProjectsSection: React.FC = () => {
       return projectsData;
     }
     return projectsData.filter(
-      (project) => project.category === selectedFilter
+      (project) => project.category === selectedFilter,
     );
   }, [selectedFilter, projectsData]);
 

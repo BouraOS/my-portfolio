@@ -166,26 +166,27 @@
       {
         "id": "time-tracking",
         "title": "Time Tracking System",
-        "shortDescription": "Comprehensive time tracking and productivity management platform for teams and clients.",
-        "longDescription": "A full-stack application built with Angular and Spring Boot that enables teams to track working hours, manage projects, and generate detailed reports. The system includes user and role management, interactive dashboards, and real-time analytics to enhance productivity and transparency.",
+        "shortDescription": "Comprehensive time tracking and productivity management platform for teams.",
+        "longDescription": "Full-stack application developed with Angular and Spring Boot, enabling teams to track working hours, manage projects, and generate detailed reports. The system includes user and role management, an interactive dashboard, and real-time analytics to improve productivity and transparency.",
         "image": "/images/projects/TimeSheet.png",
+        "imageStyle": "fill",
         "technologies": [
-          "Angular 17",
+          "Angular",
           "Spring Boot",
           "PostgreSQL",
           "PrimeNG",
           "JWT",
           "TailwindCSS"
         ],
-        "category": "fullstack",
+        "category": "web",
         "features": {
-          "dashboard": "Interactive analytics dashboard with charts and KPIs",
-          "rbac": "Role-Based Access Control for Admin, Manager, and User",
+          "dashboard": "Interactive analytics dashboard with charts and key performance indicators",
+          "rbac": "Role-Based Access Control for Admin, Manager, and User roles",
           "pdf": "Dynamic PDF report generation for timesheets and summaries",
           "filtering": "Advanced server-side filtering, search, and pagination",
           "calendar": "Integrated calendar view for project and task scheduling"
         },
-        "liveUrl": "https://your-live-demo-link.com",
+        "liveUrl": "https://your-demo-link.com",
         "githubUrl": "https://github.com/BouraOS/TMS",
         "status": "completed",
         "year": 2025
@@ -193,9 +194,10 @@
       {
         "id": "ram-assistant",
         "title": "RAM Assistant",
-        "shortDescription": "Application mobile intelligente pour améliorer l’expérience de voyage avec Royal Air Maroc.",
-        "longDescription": "RAM Assistant est une application mobile innovante, conçue pour offrir une expérience de voyage fluide et personnalisée avec Royal Air Maroc. Dès l’achat du billet, l’utilisateur peut consulter les détails de ses vols, découvrir ses avantages, et préparer son voyage grâce aux informations sur la météo, les activités à destination et les services disponibles. L’assistant permet également de commander un repas spécial, demander une assistance, vérifier les exigences de visa et bien plus encore.",
+        "shortDescription": "Smart mobile application designed to enhance the travel experience with Royal Air Maroc.",
+        "longDescription": "RAM Assistant is an innovative mobile application designed to provide a smooth and personalized travel experience with Royal Air Maroc. Users can access flight information, travel benefits, weather conditions, destination activities, special meal services, assistance requests, visa requirements, and more.",
         "image": "/images/projects/ram-assistant.webp",
+        "imageStyle": "cover",
         "technologies": [
           "React Native",
           "TypeScript",
@@ -205,15 +207,87 @@
         ],
         "category": "mobile",
         "features": {
-          "flightTracking": "Suivi des vols et des informations de voyage en temps réel",
-          "userServices": "Commande de repas spéciaux et demande d’assistance personnalisée",
-          "travelInfo": "Accès aux informations sur la météo, les activités et les visas",
-          "notifications": "Alertes et rappels automatiques avant le départ",
-          "offlineMode": "Consultation des données essentielles sans connexion Internet"
+          "flightTracking": "Real-time flight tracking and travel updates",
+          "userServices": "Special meal ordering and personalized assistance requests",
+          "travelInfo": "Access to weather, activities, and visa information for destinations",
+          "notifications": "Automatic alerts and reminders before departure",
+          "offlineMode": "Access essential data even without an Internet connection"
         },
         "liveUrl": "https://play.google.com/store/apps/details?id=com.ram1",
-        "status": "terminé",
+        "status": "completed",
         "year": 2025
+      },
+      {
+        "id": "budget-flow",
+        "title": "Budget Flow",
+        "shortDescription": "Web platform for managing budget requests with a multi-step approval workflow.",
+        "longDescription": "Web application developed from scratch with React.js and TypeScript to manage budget requests in a professional environment. The platform includes a multi-step approval workflow and role-based access control to manage user permissions and workflow actions.",
+        "image": "/images/projects/budget-flow.webp",
+        "imageStyle": "fill",
+        "technologies": [
+          "React.js",
+          "TypeScript",
+          "REST API",
+          "RBAC",
+          "TailwindCSS",
+          "Shadcn"
+        ],
+        "category": "web",
+        "features": {
+          "workflow": "Multi-step approval workflow for budget requests",
+          "rbac": "Role-Based Access Control for user permissions and workflow actions",
+          "requestManagement": "Creation and management of budget requests",
+          "frontendArchitecture": "Modular frontend architecture with reusable components"
+        },
+        "githubUrl": "",
+        "status": "completed",
+        "year": 2026
+      },
+      {
+        "id": "flight-watch",
+        "title": "Flight Watch",
+        "shortDescription": "Real-time mobile application dedicated to flight tracking and crew operations.",
+        "longDescription": "Real-time mobile application developed with React Native and Expo for crew members in an aviation operational environment. The application manages flights, passengers, crew members, and operational data, with a strong focus on responsiveness and performance.",
+        "image": "/images/projects/flight-watch.webp",
+        "imageStyle": "fill",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "WebSockets",
+          "Sqlite"
+        ],
+        "category": "mobile",
+        "features": {
+          "realtime": "Real-time updates of operational data",
+          "flightManagement": "Flight information management and tracking",
+          "crewManagement": "Crew management and operational data handling",
+          "performance": "Re-render optimization and improved application responsiveness"
+        },
+        "liveUrl": "",
+        "githubUrl": "",
+        "status": "completed",
+        "year": 2025
+      },
+      {
+        "id": "skyshop",
+        "title": "Skyshop",
+        "shortDescription": "Web and mobile e-commerce platform dedicated to duty-free products.",
+        "longDescription": "E-commerce platform developed with React Native and React.js for duty-free operations. The project includes feature development and maintenance, as well as performance and production stability optimization for the mobile application.",
+        "image": "/images/projects/skyshop.webp",
+        "imageStyle": "fill",
+        "technologies": ["React Native", "React.js", "TypeScript", "REST API"],
+        "category": "web",
+        "features": {
+          "ecommerce": "E-commerce features for a duty-free platform",
+          "mobile": "Mobile application developed with React Native",
+          "web": "Web interface developed with React.js",
+          "performance": "Performance and production stability optimization"
+        },
+        "liveUrl": "",
+        "githubUrl": "",
+        "status": "completed",
+        "year": 2024
       }
     ]
   }
