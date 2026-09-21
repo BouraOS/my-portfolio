@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import SocialLinks from "./SocialLinks";
 const ProfileImage = lazy(() =>
-  Promise.resolve({ default: ProfileImageComponent })
+  Promise.resolve({ default: ProfileImageComponent }),
 );
 
 function ProfileImageComponent() {
@@ -14,7 +14,7 @@ function ProfileImageComponent() {
         ></div>
         <img
           loading="lazy"
-          src="/images/photo-profile.webp"
+          src="/images/photo-profile-2.webp"
           alt="Bouramada Oussama - Full Stack Developer portrait"
           width={256}
           height={256}
